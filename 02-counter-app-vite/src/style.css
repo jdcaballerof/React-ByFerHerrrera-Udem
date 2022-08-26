@@ -1,0 +1,19 @@
+body{
+    background-color: #21232A;
+    color: white;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 1.3 rem;
+    padding: 70px;
+}
+
+.lineas{
+    margin-top: 1.2rem;
+    color: aqua;
+    font-size: 2.6rem;
+    text-align: center;
+}
+
+.red{
+    color: deeppink;
+    font-size: 2rem;
+}
