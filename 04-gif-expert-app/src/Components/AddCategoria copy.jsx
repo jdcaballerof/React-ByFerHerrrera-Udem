@@ -2,7 +2,7 @@ import { useState } from "react"
 
 
 
-export default function AddCategoria( {setCateg} ) {
+export default function AddCategoria( {setCateg} ) {   //Recuuerda que al desestructurar usas las Key's pero se esta tomando el Valor
 
     const onAddCateg = () => {
         // categorias.push("Gohan");
