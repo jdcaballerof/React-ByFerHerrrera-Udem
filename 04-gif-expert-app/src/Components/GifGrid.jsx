@@ -1,28 +1,20 @@
-import { useEffect, useState } from "react";
-import { getGifsData } from "../Helpers/getGifsData";
+import { useFetchGifs } from "../hooks/useFetchGifs";
 import { GifItem_forGrid } from "./GifItem_forGrid";
 
 
 export const GifGrid = ({categoria, numDeGifs}) => {
 
-//Valor a mostrat en la lista
-    const [imagenes, setImagenes] = useState( [] ); //Agrega al array la nueva data del gif (como un objeto)
-//Valor a mostrat en la lista
+    const { images:imagenes, isLoading } = useFetchGifs( categoria, numDeGifs )
+    console.log('Esta cargando:',isLoading)
 
-
-    const obtenerImagenes = async() => {
-        const nuevoGifData = await getGifsData(categoria, numDeGifs);
-        setImagenes(nuevoGifData) 
-    }
-
-    useEffect(() => {
-        obtenerImagenes()
-    }, [])  
-    
 
     return (
     <>
         <h3>{ categoria }</h3>
+
+        {/* If pequeño */}
+        { isLoading && (<h2>Cargando...</h2>) }  
+
         <div className="card-grid">
             {
                 imagenes.map( item => (

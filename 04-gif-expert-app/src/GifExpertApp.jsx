@@ -6,7 +6,7 @@ import { GifGrid } from './Components/GifGrid';
 export const GifExpertApp = () => {
 
     //  AddCategoria
-    const [ categorias, setCateg] = useState( ['Goku'] );
+    const [ categorias, setCateg] = useState( [] );
 
     const onAddCateg = ( inputValueTrim ) => {
         setCateg([ inputValueTrim, ...categorias])

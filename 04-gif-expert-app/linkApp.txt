@@ -1,0 +1,6 @@
+Link de la app en la web:
+https://gifapp-davidcf.netlify.app/
+
+
+Hacer updates arrastrando la nueva carpeta de distribución en: 
+https://app.netlify.com/sites/gifapp-davidcf/deploys
