@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Mensaje } from "./Mensaje";
 
   
   
@@ -25,8 +26,16 @@ import { useEffect, useState } from "react";
 
        useEffect(() => {
          console.log('useEffect ejecutado');
-       }, ['dependencias (significado: depende a que esto pase para que se active)'])
+       }, [])                       //Al renderizar
        
+       useEffect(() => {
+        //  console.log("cambio en el formulario");
+       }, [estadoFormulario]);      //Al cambiar algo del objeto Formulario
+       
+       useEffect(() => {
+        //  console.log("cambio el email");
+       }, [email]);                 //Al cambiar el valor de email dentro del obj Formulario
+
 
     return (
       <>
@@ -34,6 +43,8 @@ import { useEffect, useState } from "react";
 
         <input type="text" className='form-control m-2' placeholder='Usuario' name='username' value={username} onChange={ onCambioDelInput }  />
         <input type="email" className='form-control m-2' placeholder='Usuario@email.com' name='email' value={email} onChange={ onCambioDelInput } />
+
+        { (username === 'Goku2') && <Mensaje />    }
       </>
     );
   }
