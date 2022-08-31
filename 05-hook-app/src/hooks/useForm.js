@@ -15,12 +15,7 @@ export const useForm = ( formaInicial={} ) => {
        }
 
        const onResetearForm = () => {
-        setEstadoFormulario({
-          username: "veg",
-          email: "",
-          contraseña1: ''
-         })
-  
+        setEstadoFormulario( formaInicial )
       }
   
   

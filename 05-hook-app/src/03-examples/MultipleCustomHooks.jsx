@@ -6,7 +6,7 @@ import Quote from "./Quote"
 
 export const MultipleCustomHooks = () => {
 
-    const { counter, incrementar,decrementar, resetear } = useCounter(1, 2, 1)  // no hay quotes de la 31-62 y +103
+    const { counter, incrementar,decrementar, resetear } = useCounter(1, 1, 1)  // no hay quotes de la 31-62 y +103
 
     const { data, isLoading } = useFetch(`https://www.breakingbadapi.com/api/quotes/${counter}`)
 
@@ -25,8 +25,8 @@ export const MultipleCustomHooks = () => {
 
       { isLoading ? <LoadingQuote /> : <Quote quote1={ quote } data1={ data } /> }
 
-      <button onClick={ incrementar } >Next quote</button>
       <button onClick={ decrementar } >Back quote</button>
+      <button onClick={ incrementar } >Next quote</button>
       <button onClick={ resetear } >Reset</button>
     </>
   );

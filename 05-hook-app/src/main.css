@@ -1,4 +1,26 @@
-* {
+body {
   background-color: #202020;
   color: #fff;
+}
+
+div > *{
+  margin: 5px;
+}
+
+h1{
+  margin: 5px 15px;
+}
+
+hr {
+  height: 02px;
+  background-color: white;
+}
+
+.cyan{
+  height: 5px;
+  margin-left: 3%;
+  margin-right: 3%;
+  align-items: center;
+  background-color: aqua;
+  color: aqua;
 }
