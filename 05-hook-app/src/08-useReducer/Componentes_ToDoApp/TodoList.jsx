@@ -1,14 +1,14 @@
+import { TodoItem } from "./TodItem"
 
 
-export const TodoList = ({toDos=[]}) => {
+export const TodoList = ({toDos=[], onDeleteTodo, onCheckTodo}) => {
+
+
   return (
     <>
         <ul>
             {toDos.map((toDo) => (
-              <li key={toDo.id} className="list-group-item d-flex justify-content-between mt-2">
-                <span className="align-self-center">h1 {toDo.descripcion}</span>
-                <button className="btn btn-danger">Borrar</button>
-              </li>
+              <TodoItem key={toDo.id } toDo={toDo} onDeleteTodo={onDeleteTodo} onCheckTodo={onCheckTodo} />
             ))}
           </ul>
     </>
